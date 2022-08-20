@@ -1,8 +1,13 @@
 require("dotenv").config();
 const express = require("express");
+const helmet = require("helmet");
+const compression = require('compression');
 
 const app = express();
 app.use(express.json());
+app.use(helmet());
+app.use(compression());
+
 const { getWishes, createWish, archiveWish } = require("./notion");
 
 app.get("/wishes", async (req, res) =>
