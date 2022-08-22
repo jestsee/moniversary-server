@@ -13,7 +13,7 @@ app.use(compression());
 const { getWishes, createWish, archiveWish } = require("./notion");
 
 var corsOptions = {
-  origin: "http://127.0.0.1:5173", // TODO ganti sm url deploy
+  origin: ["http://127.0.0.1:5173", "https://moniversary.netlify.app/"], // TODO ganti sm url deploy
   optionsSuccessStatus: 200, // For legacy browser support
 };
 
